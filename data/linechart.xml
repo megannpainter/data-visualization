@@ -1,0 +1,20 @@
+<xml>
+    <country name="Canada">
+        <nineseven>112683</nineseven>
+        <ohtwo>141677</ohtwo>
+        <ohseven>197503</ohseven>
+        <twelve>227601</twelve>
+    </country>
+    <country name="Mexico">
+        <nineseven>54272</nineseven>
+        <ohtwo>71044</ohtwo>
+        <ohseven>81719</ohseven>
+        <twelve>110230</twelve>
+    </country>
+    <country name="All Other Countries">
+        <nineseven>410847</nineseven>
+        <ohtwo>382797</ohtwo>
+        <ohseven>594186</ohseven>
+        <twelve>786848</twelve>
+    </country>
+</xml>

@@ -1,0 +1,138 @@
+/*-------------NAVIGATION HEADER-------------*/
+.btn {
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: Georgia;
+  color: #FFF;
+  font-size: 12px;
+  background: #638AA9;
+  padding: 7px;
+  border: solid #235c80 1px;
+  text-decoration: none;
+  float: right;
+  margin: 5px;
+}
+
+.btn:hover {
+  background: #235c80;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo {
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 50px;
+}
+
+.settings {
+  float: right;
+}
+
+/*-------------NAVIGATION-------------*/
+.blackline {
+  border-bottom: solid;
+}
+
+
+/*--------------HAMBURGER MENU-------------*/
+/*http://codepen.io/g13nn/pen/eHGEF?editors=0110*/
+header{
+	width:100%; 
+	background:#1d1f20; 
+	height:50px; 
+	line-height:50px;
+}
+.hamburger{
+  background:none;
+  position:absolute;
+  top:0;
+  line-height:45px;
+  padding:0px 15px 0px 15px;
+  color:#000;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.cross{
+  background:none;
+  position:absolute;
+  top:0px;
+  padding:0px 15px 0px 15px;
+  color:#000;
+  font-size:3em;
+  line-height:50px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.menu {
+  z-index:1000000;
+  font-weight:bold;
+  font-size:0.8em;
+  width:50%;
+  background:#fff;
+  position:absolute;
+  margin: 0 0 0 80px;
+}
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+  }
+.menu li {
+  display: block;
+  padding:15px;
+  border-bottom:#1d1f20 1px solid;
+  }
+.menu li:hover {
+  display: block;
+  background:#181818;
+  padding:15px;
+  border-bottom:#1d1f20 1px solid;
+  }
+.menu ul li a {
+  text-decoration:none;
+  margin: 0px;
+  color: black;
+  }
+.menu ul li a:hover {
+  color: #fff;
+  text-decoration:none;
+  }
+.menu a {
+  text-decoration:none;
+  color: #000;
+  }
+.menu a:hover {
+  text-decoration:none;
+  color:white;
+  }
+
+.glyphicon-home{
+  color:white; 
+  font-size:1.5em; 
+  margin-top:5px; 
+  margin:0 auto;
+}
+/*-------------CHARTS-------------*/
+
+/*-------------FONTS-------------*/
+p {
+    font-family: 'Droid Serif', serif;
+}
+h1 {
+  
+}
+h2 {
+  font-weight: 700;
+}
+h3{
+  
+}
