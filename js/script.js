@@ -63,6 +63,8 @@ $(document).ready(function loadDataBar() {
 
 //------------BAR GRAPH--------------
  
+ 
+// help via: http://kierstenschmidt.com/586/Project3/ and https://github.com/kschmidt2/586project3/blob/master/js/charts.js#L29
 function parseBar(xml){
    console.log(xml);
      $(xml).find("country").each(function(){
@@ -119,7 +121,6 @@ $(function parseBar() {
                   fontWeight:700,
                },
             },
-   
             labels: {
                style: {
                     color: '#000',
@@ -127,27 +128,12 @@ $(function parseBar() {
                },
             }
          },
-   
-         tooltip: {
-             //  style: {
-             //   color: '#a65c7a',
-             //   fontSize: '15px',
-             //   fontFamily: 'Titillium+Web'
-             // },
-             //     headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-             //     pointFormat: '<tr><td style="color:#a65c7a;padding:0">{series.name}: </td>' +
-             //         '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
-             //     footerFormat: '</table>',
-             //     shared: true,
-             //     useHTML: true
-         },
          plotOptions: {
             column: {
                pointPadding: 0.2,
                borderWidth: 0
             }
          },
-   
          series: [{
             name: 'Canada',
             data: newTons,
@@ -334,6 +320,12 @@ $(function () {
         }]
     });
 });
+
+$(document).ready(function() {
+            $('#example').DataTable( {
+             "ajax": '../data/finaltable.js'
+            } );
+        } );
 
 //---------------HAMBURGER MENU----------------
 //http://codepen.io/g13nn/pen/eHGEF?editors=0110

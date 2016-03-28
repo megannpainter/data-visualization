@@ -122,6 +122,10 @@ header{
   margin:0 auto;
 }
 /*-------------CHARTS-------------*/
+#example {
+  background-color: #08CC5A;
+}
+
 
 /*-------------FONTS-------------*/
 p {

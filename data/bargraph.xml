@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<root>
+<xml>
   <country name="Canada">
     <all>
       <newValue>227601</newValue>
@@ -216,4 +215,4 @@
       <oldPctTons>15.6</oldPctTons>
     </other>
   </country>
-</root>
+</xml>
