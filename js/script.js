@@ -3,9 +3,7 @@ $(document).ready(function(){
 });
 
 //-----------LOAD DATA--------------
-    var root = [];
     var country = [];
-    var all = [];
     var truck = [];
     var rail = [];
     var water = [];
@@ -27,21 +25,41 @@ $(document).ready(function(){
    var ohtwo = [];
    var ohseven = [];
    var twelve = []
+   var twelvepct = [];
+   var ninesevenpct = [];
+   
+   var truckNewTons = [];
+   var railNewTons = [];
+   var waterNewTons = [];
+   var airNewTons = [];
+   var parcelNewTons = [];
+   var otherNewTons = [];
+   
+   var truckOldTons = [];
+   var railOldTons = [];
+   var waterOldTons = [];
+   var airOldTons = [];
+   var parcelOldTons = [];
+   var otherOldTons = [];
 
+$(document).ready(function(){
+    loadData();
+});
 
-   parseBar();
-   parseLine();
-   parsePie1();
-   parsePie2();
-
-
-$(document).ready(function loadDataBar() {
-  console.log("doc ready");
+function loadData() {
+   console.log("doc ready");
   $.ajax({
     url: '../data/bargraph.xml',
     type: 'GET',
     data: 'xml',
     success: parseBar
+  }),
+  
+  $.ajax({
+    url: '../data/bargraph.xml',
+    type: 'GET',
+    data: 'xml',
+    success: parseBar2
   }),
   
    $.ajax({
@@ -55,15 +73,21 @@ $(document).ready(function loadDataBar() {
       url: '../data/bargraph.xml',
       type: 'GET',
       data: 'xml',
-      success: parsePie1, parsePie2
+      success: parsePie1
    })
-});
-
-
-
+   
+   $.ajax({
+      url: '../data/bargraph.xml',
+      type: 'GET',
+      data: 'xml',
+      success: parsePie2
+   })
+}
+  
+  
+  
 //------------BAR GRAPH--------------
- 
- 
+
 // help via: http://kierstenschmidt.com/586/Project3/ and https://github.com/kschmidt2/586project3/blob/master/js/charts.js#L29
 function parseBar(xml){
    console.log(xml);
@@ -71,12 +95,33 @@ function parseBar(xml){
       var $country =$(this);
       var name = $country.attr("name");
       
+      $(this).find("truck").each(function(){
+         truckNewTons.push(parseFloat($(this).find('newTons').text()));
+         })
+      $(this).find("rail").each(function(){
+         railNewTons.push(parseFloat($(this).find('newTons').text()));
+         })
+      $(this).find("water").each(function(){
+         waterNewTons.push(parseFloat($(this).find('newTons').text()));
+         })
+      $(this).find("air").each(function(){
+         airNewTons.push(parseFloat($(this).find('newTons').text()));
+         })
+      $(this).find("parcel").each(function(){
+         parcelNewTons.push(parseFloat($(this).find('newTons').text()));
+         })
+      $(this).find("other").each(function(){
+         otherNewTons.push(parseFloat($(this).find('newTons').text()));
+         })
+      
       country.push($(this).attr("name"));
       newTons.push(parseFloat($(this).find('newTons').text()));
-     }); 
+     });
+  
+     buildBar()
    };
    
-$(function parseBar() {
+function buildBar() {
       $('#barChart').highcharts({
          chart: {
             renderTo: 'chart',
@@ -91,10 +136,14 @@ $(function parseBar() {
                fontWeight: 700
             },
          },
+         subtitle: {
+            text: 'Source: U.S. Department of Transportation',
+            x: -20
+         },
          xAxis: {
-            categories: [country[0], country[1], country[2]],
+            categories: ["Truck", "Rail", "Water", "Air", "Parcel/Postage", "Other"],
             title: {
-               text: 'Country of Final Destination',
+               text: 'Modes of Transportation',
                style: {
                   color: '#000',
                   font: '14px Titillium+Web',
@@ -111,10 +160,10 @@ $(function parseBar() {
          yAxis: {
             allowDecimals: true,
             min: 0,
-            max: 10000,
-            tickInterval: 1000,
+            max: 200,
+            tickInterval: 20,
             title: {
-               text: 'Tons Exported (in Thousands)',
+               text: 'Tons Exported (millions)',
                style: {
                   color: '#000',
                   font: '14px Titillium+Web',
@@ -136,19 +185,131 @@ $(function parseBar() {
          },
          series: [{
             name: 'Canada',
-            data: newTons,
+            data: [truckNewTons[0], railNewTons[0], waterNewTons[0], airNewTons[0], parcelNewTons[0], otherNewTons[0]],
             color: '#057F38'
          }, {
             name: 'Mexico',
-            data: newTons,
+            data: [truckNewTons[1], railNewTons[1], waterNewTons[1], airNewTons[1], parcelNewTons[1], otherNewTons[1]],
             color: '#08CC5A'
          }, {
             name: 'All Other Countries',
-            data: newTons,
+            data: [truckNewTons[2], railNewTons[2], waterNewTons[2], airNewTons[2], parcelNewTons[2], otherNewTons[2]],
             color: "#57FF9D"
          }]//ends series
       })
-   });//ends 
+   };//ends
+   
+   
+//----------BAR GRAPH 2------------
+function parseBar2(xml){
+   console.log(xml);
+     $(xml).find("country").each(function(){
+      var $country =$(this);
+      var name = $country.attr("name");
+      
+      $(this).find("truck").each(function(){
+         truckOldTons.push(parseFloat($(this).find('oldTons').text()));
+         })
+      $(this).find("rail").each(function(){
+         railOldTons.push(parseFloat($(this).find('oldTons').text()));
+         })
+      $(this).find("water").each(function(){
+         waterOldTons.push(parseFloat($(this).find('oldTons').text()));
+         })
+      $(this).find("air").each(function(){
+         airOldTons.push(parseFloat($(this).find('oldTons').text()));
+         })
+      $(this).find("parcel").each(function(){
+         parcelOldTons.push(parseFloat($(this).find('oldTons').text()));
+         })
+      $(this).find("other").each(function(){
+         otherOldTons.push(parseFloat($(this).find('oldTons').text()));
+         })
+      
+      country.push($(this).attr("name"));
+      oldTons.push(parseFloat($(this).find('oldTons').text()));
+     });
+  
+     buildBar2()
+   };
+   
+function buildBar2() {
+      $('#barChart2').highcharts({
+         chart: {
+            renderTo: 'chart',
+            type: 'bar',
+            backgroundColor: '#EBEBEB',
+            type: 'column'
+             },
+         title: {
+            text: 'U.S. Exports by Country of Destination and Mode of Travel (1997)',
+            style: {
+               font: '20px Titillium+Web',
+               fontWeight: 700
+            },
+         },
+         subtitle: {
+            text: 'Source: U.S. Department of Transportation',
+            x: -20
+         },
+         xAxis: {
+            categories: ["Truck", "Rail", "Water", "Air", "Parcel/Postage", "Other"],
+            title: {
+               text: 'Modes of Transportation',
+               style: {
+                  color: '#000',
+                  font: '14px Titillium+Web',
+                  fontWeight: '700'
+                   },
+            },
+            labels: {
+               style: {
+                    color: '#000',
+                    font: '12px Titillium+Web'
+               },
+            }
+         },
+         yAxis: {
+            allowDecimals: true,
+            min: 0,
+            max: 200,
+            tickInterval: 20,
+            title: {
+               text: 'Tons Exported (millions)',
+               style: {
+                  color: '#000',
+                  font: '14px Titillium+Web',
+                  fontWeight:700,
+               },
+            },
+            labels: {
+               style: {
+                    color: '#000',
+                    font: '12px Titillium+Web'
+               },
+            }
+         },
+         plotOptions: {
+            column: {
+               pointPadding: 0.2,
+               borderWidth: 0
+            }
+         },
+         series: [{
+            name: 'Canada',
+            data: [truckOldTons[0], railOldTons[0], waterOldTons[0], airOldTons[0], parcelOldTons[0], otherOldTons[0]],
+            color: '#057F38'
+         }, {
+            name: 'Mexico',
+            data: [truckOldTons[1], railOldTons[1], waterOldTons[1], airOldTons[1], parcelOldTons[1], otherOldTons[1]],
+            color: '#08CC5A'
+         }, {
+            name: 'All Other Countries',
+            data: [truckOldTons[2], railOldTons[2], waterOldTons[2], airOldTons[2], parcelOldTons[2], otherOldTons[2]],
+            color: "#57FF9D"
+         }]//ends series
+      })
+   };//ends 
       
 //------------line chart------------
 function parseLine(xml){
@@ -159,10 +320,11 @@ function parseLine(xml){
        ohtwo.push(parseFloat($(this).find("ohtwo").text()));
        ohseven.push(parseFloat($(this).find("ohseven").text()));
        twelve.push(parseFloat($(this).find("twelve").text()));
-     }); 
+     });
+     buildLine();
    };
 
-$(function parseLine(xml) {
+function buildLine() {
      $('#lineChart').highcharts({
         chart: {
             renderTo: 'chart',
@@ -179,7 +341,7 @@ $(function parseLine(xml) {
         },
         xAxis: {
             text: "Years",
-            data: ["1997", "2002", "2007", "2012"]
+            categories: ["1997", "2002", "2007", "2012"],
         },
         yAxis: {
             title: {
@@ -204,16 +366,19 @@ $(function parseLine(xml) {
         },
         series: [{
             name: 'Canada',
-            data: [nineseven[0], ohtwo[0], ohseven[0], twelve[0]]
+            data: [nineseven[0], ohtwo[0], ohseven[0], twelve[0]],
+            color: '#057F38'
         }, {
             name: 'Mexico',
-            data: [nineseven[1], ohtwo[1], ohseven[1], twelve[1]]
+            data: [nineseven[1], ohtwo[1], ohseven[1], twelve[1]],
+            color: '#08CC5A'
         }, {
             name: 'All Other Countries',
-            data: [nineseven[2], ohtwo[2], ohseven[2], twelve[2]]
+            data: [nineseven[2], ohtwo[2], ohseven[2], twelve[2]],
+            color: "#57FF9D"
         }]
     });
-});
+};
 
 //------------------PIE CHART-----------------
 function parsePie1(xml){
@@ -222,9 +387,10 @@ function parsePie1(xml){
       twelvepct.push(parseFloat($(this).find("canada").text()));
       twelvepct.push(parseFloat($(this).find("mexico").text()));
       twelvepct.push(parseFloat($(this).find("allothers").text()));
-     }); 
+     });
+     buildPie1()
    };
-$(function () {
+function buildPie1() {
     $('#pieChart1').highcharts({
         chart: {
             plotBackgroundColor: null,
@@ -256,17 +422,20 @@ $(function () {
             colorByPoint: true,
             data: [{
                 name: 'Canada',
-                y: 18.8
+                y: 18.8, 
+                color: '#057F38'
             }, {
                 name: 'Mexico',
-                y: 7
+                y: 7,
+                color: '#08CC5A'
             }, {
                 name: 'All Others',
-                y: 74.2
+                y: 74.2,
+                color: "#57FF9D"
             }]
         }]
     });
-});
+};
 
 //------------BUILD PIE CHART 2------------
 function parsePie2(xml){
@@ -275,9 +444,10 @@ function parsePie2(xml){
       ninesevenpct.push(parseFloat($(this).find("canada").text()));
       ninesevenpct.push(parseFloat($(this).find("mexico").text()));
       ninesevenpct.push(parseFloat($(this).find("allothers").text()));
-     }); 
+     });
+     buildPie2();
    };
-$(function () {
+function buildPie2() {
     $('#pieChart2').highcharts({
         chart: {
             plotBackgroundColor: null,
@@ -309,17 +479,20 @@ $(function () {
             colorByPoint: true,
             data: [{
                 name: 'Canada',
-                y: 15.7
+                y: 15.7,
+                color: '#057F38'
             }, {
                 name: 'Mexico',
-                y: 13.9
+                y: 13.9,
+                color: '#08CC5A'
             }, {
                 name: 'All Others',
-                y: 70.4
+                y: 70.4,
+                color: "#57FF9D"
             }]
         }]
     });
-});
+};
 
 $(document).ready(function() {
             $('#example').DataTable( {

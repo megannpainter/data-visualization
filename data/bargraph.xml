@@ -1,73 +1,63 @@
 <xml>
   <country name="Canada">
-    <all>
-      <newValue>227601</newValue>
-      <newPctValue>100</newPctValue>
-      <newTons>112683</newTons>
-      <newPctTons>100</newPctTons>
-      <oldValue>88722</oldValue>
-      <oldPctValue>100</oldPctValue>
-      <oldTons>99073</oldTons>
-      <oldPctTons>100</oldPctTons>
-    </all>
     <truck>
-      <newValue>165581</newValue>
+      <newValue>165.581</newValue>
       <newPctValue>72.8</newPctValue>
-      <newTons>68554</newTons>
+      <newTons>68.554</newTons>
       <newPctTons>60.8</newPctTons>
-      <oldValue>47237</oldValue>
+      <oldValue>47.237</oldValue>
       <oldPctValue>53.2</oldPctValue>
-      <oldTons>38183</oldTons>
-      <oldPctTons>38.5</oldPctTons>
+      <oldTons>38.183</oldTons>
+      <oldPctTons>385</oldPctTons>
     </truck>
     <rail>
       <newValue>28692</newValue>
       <newPctValue>12.6</newPctValue>
-      <newTons>13157</newTons>
+      <newTons>13.157</newTons>
       <newPctTons>11.7</newPctTons>
       <oldValue>11367</oldValue>
       <oldPctValue>30.5</oldPctValue>
-      <oldTons>22213</oldTons>
+      <oldTons>22.213</oldTons>
       <oldPctTons>22.4</oldPctTons>
     </rail>
     <water>
       <newValue>3858</newValue>
       <newPctValue>1.7</newPctValue>
-      <newTons>2200</newTons>
+      <newTons>2.200</newTons>
       <newPctTons>2</newPctTons>
       <oldValue>14028</oldValue>
       <oldPctValue>15.8</oldPctValue>
-      <oldTons>29045</oldTons>
+      <oldTons>29.045</oldTons>
       <oldPctTons>29.3</oldPctTons>
     </water>
     <air>
       <newValue>13291</newValue>
       <newPctValue>5.8</newPctValue>
-      <newTons>10527</newTons>
+      <newTons>10.527</newTons>
       <newPctTons>9.3</newPctTons>
       <oldValue>172</oldValue>
       <oldPctValue>0.2</oldPctValue>
-      <oldTons>269</oldTons>
+      <oldTons>.269</oldTons>
       <oldPctTons>0.3</oldPctTons>
     </air>
     <parcel>
       <newValue>16162</newValue>
       <newPctValue>7.1</newPctValue>
-      <newTons>4759</newTons>
+      <newTons>4.759</newTons>
       <newPctTons>4.2</newPctTons>
       <oldValue>174</oldValue>
       <oldPctValue>0.2</oldPctValue>
-      <oldTons>306</oldTons>
+      <oldTons>.306</oldTons>
       <oldPctTons>0.3</oldPctTons>
     </parcel>
     <other>
       <newValue>0</newValue>
       <newPctValue>0</newPctValue>
-      <newTons>13410</newTons>
+      <newTons>13.410</newTons>
       <newPctTons>11.9</newPctTons>
       <oldValue>0</oldValue>
       <oldPctValue>0</oldPctValue>
-      <oldTons>8722</oldTons>
+      <oldTons>8.722</oldTons>
       <oldPctTons>8.8</oldPctTons>
     </other>
   </country>
@@ -75,71 +65,71 @@
     <all>
       <newValue>110230</newValue>
       <newPctValue>100</newPctValue>
-      <newTons>54272</newTons>
+      <newTons>54.272</newTons>
       <newPctTons>100</newPctTons>
       <oldValue>78335</oldValue>
       <oldPctValue>100</oldPctValue>
-      <oldTons>36869</oldTons>
+      <oldTons>36.869</oldTons>
       <oldPctTons>100</oldPctTons>
     </all>
     <truck>
       <newValue>65597</newValue>
       <newPctValue>59.5</newPctValue>
-      <newTons>34073</newTons>
+      <newTons>34.073</newTons>
       <newPctTons>62.8</newPctTons>
       <oldValue>22333</oldValue>
       <oldPctValue>28.5</oldPctValue>
-      <oldTons>12544</oldTons>
+      <oldTons>12.544</oldTons>
       <oldPctTons>34</oldPctTons>
     </truck>
     <rail>
       <newValue>18980</newValue>
       <newPctValue>17.2</newPctValue>
-      <newTons>S</newTons>
+      <newTons>0</newTons>
       <newPctTons>S</newPctTons>
       <oldValue>30667</oldValue>
       <oldPctValue>39.1</oldPctValue>
-      <oldTons>S</oldTons>
+      <oldTons>0</oldTons>
       <oldPctTons>S</oldPctTons>
     </rail>
     <water>
       <newValue>13528</newValue>
       <newPctValue>12.3</newPctValue>
-      <newTons>S</newTons>
+      <newTons>0</newTons>
       <newPctTons>S</newPctTons>
       <oldValue>21778</oldValue>
       <oldPctValue>27.8</oldPctValue>
-      <oldTons>S</oldTons>
+      <oldTons>0</oldTons>
       <oldPctTons>S</oldPctTons>
     </water>
     <air>
       <newValue>5617</newValue>
       <newPctValue>5.1</newPctValue>
-      <newTons>2571</newTons>
+      <newTons>2.571</newTons>
       <newPctTons>4.7</newPctTons>
       <oldValue>70</oldValue>
       <oldPctValue>0.1</oldPctValue>
-      <oldTons>47</oldTons>
+      <oldTons>.047</oldTons>
       <oldPctTons>0.1</oldPctTons>
     </air>
     <parcel>
       <newValue>3851</newValue>
       <newPctValue>3.5</newPctValue>
-      <newTons>537</newTons>
+      <newTons>.537</newTons>
       <newPctTons>1</newPctTons>
       <oldValue>26</oldValue>
       <oldPctValue>0</oldPctValue>
-      <oldTons>24</oldTons>
+      <oldTons>.024</oldTons>
       <oldPctTons>0</oldPctTons>
     </parcel>
     <other>
       <newValue>0</newValue>
       <newPctValue>0</newPctValue>
-      <newTons>5637</newTons>
+      <newTons>5.637</newTons>
       <newPctTons>10.4</newPctTons>
       <oldValue>0</oldValue>
       <oldPctValue>0</oldPctValue>
-      <oldTons>1972</oldTons>
+      <oldTons>1.972</oldTons>
       <oldPctTons>5.3</oldPctTons>
     </other>
   </country>
@@ -147,71 +137,71 @@
     <all>
       <newValue>786848</newValue>
       <newPctValue>100</newPctValue>
-      <newTons>410847</newTons>
+      <newTons>41.0847</newTons>
       <newPctTons>100</newPctTons>
       <oldValue>397463</oldValue>
       <oldPctValue>100</oldPctValue>
-      <oldTons>390291</oldTons>
+      <oldTons>39.0291</oldTons>
       <oldPctTons>100</oldPctTons>
     </all>
     <truck>
       <newValue>0</newValue>
       <newPctValue>0</newPctValue>
-      <newTons>9315</newTons>
+      <newTons>9.315</newTons>
       <newPctTons>2.3</newPctTons>
       <oldValue>0</oldValue>
       <oldPctValue>0</oldPctValue>
-      <oldTons>7111</oldTons>
+      <oldTons>7.111</oldTons>
       <oldPctTons>1.8</oldPctTons>
     </truck>
     <rail>
       <newValue>0</newValue>
       <newPctValue>0</newPctValue>
-      <newTons>564</newTons>
+      <newTons>.564</newTons>
       <newPctTons>0.1</newPctTons>
       <oldValue>0</oldValue>
       <oldPctValue>0</oldPctValue>
-      <oldTons>1209</oldTons>
+      <oldTons>1.209</oldTons>
       <oldPctTons>0.3</oldPctTons>
     </rail>
     <water>
       <newValue>43937</newValue>
       <newPctValue>55.8</newPctValue>
-      <newTons>158993</newTons>
+      <newTons>15.8993</newTons>
       <newPctTons>38.7</newPctTons>
       <oldValue>393967</oldValue>
       <oldPctValue>99.1</oldPctValue>
-      <oldTons>311307</oldTons>
+      <oldTons>311.307</oldTons>
       <oldPctTons>79.8</oldPctTons>
     </water>
     <air>
       <newValue>347911</newValue>
       <newPctValue>44.2</newPctValue>
-      <newTons>183608</newTons>
+      <newTons>183.608</newTons>
       <newPctTons>44.7</newPctTons>
       <oldValue>3487</oldValue>
       <oldPctValue>0.9</oldPctValue>
-      <oldTons>4103</oldTons>
+      <oldTons>4.103</oldTons>
       <oldPctTons>1.1</oldPctTons>
     </air>
     <parcel>
       <newValue>0</newValue>
       <newPctValue>0</newPctValue>
-      <newTons>12255</newTons>
+      <newTons>12.255</newTons>
       <newPctTons>3</newPctTons>
       <oldValue>0</oldValue>
       <oldPctValue>0</oldPctValue>
-      <oldTons>1704</oldTons>
+      <oldTons>1.704</oldTons>
       <oldPctTons>0.4</oldPctTons>
     </parcel>
     <other>
       <newValue>0</newValue>
       <newPctValue>0</newPctValue>
-      <newTons>45252</newTons>
+      <newTons>45.252</newTons>
       <newPctTons>11</newPctTons>
       <oldValue>0</oldValue>
       <oldPctValue>0</oldPctValue>
-      <oldTons>60717</oldTons>
+      <oldTons>60.717</oldTons>
       <oldPctTons>15.6</oldPctTons>
     </other>
   </country>

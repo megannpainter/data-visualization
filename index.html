@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>Transforamtion in Export Transportation: 1997-2012</title>
+    <title>Transformation in Export Transportation: 1997-2012</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 hidden-sm">
              <!---------http://codepen.io/g13nn/pen/eHGEF--------->
                 <button class="hamburger">&#9776;</button>
                 <button class="cross">&#735;</button>
@@ -33,10 +33,10 @@
                     </ul>
                   </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-12">
                 <img class="logo" src="img/nytimes.jpg" alt="new york times logo">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 hidden-sm">
                 <a href="#" <img src="img/settings.png" alt="settings" class="settings"> </a>
                 <p class="btn" >LOG IN</p>
                 <p class="btn">SUBSCRIBE NOW</p>
@@ -45,18 +45,24 @@
         </div>
         <div class="row">
             <div class="col-md-12 blackline">
-                <h2>U.S.</h2>
+                <h1>U.S.</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <h2>Transportation of U.S. Exports</h2>
-                <p>Due to the immense land, variety of crops avaliable and the increase in technology globally, the ability to produce produce items within the United States for export has continued to grow also.  The graphs below represent data on the increase in U.S. exports and how they are transported to their final destinations.  The research focuses extensively on Canada and Mexico, the United States' neighboring country, with additional data on all of the other states that it sells products too.</p>
+                <p>The Department of Transportation has conducted several census surveys from 1997-2012 about the transportation process of United States Exports.  These exports include agricultural products, minerals, coal, petroleum, grains, alcohol, tobacco, wood, chemical products, textiles, pharmaceuticals, etc.  The DOT categorizes the final product destinations by America's two neighbors, Canada and Mexico, as well as all other countries.  The data reflects that division.  These exports bring in a high amount of money for the U.S. (in 2012, the value of all of these commodities was $1.125 trillion, according to the census.  Below are charts that show the change in export transportation from 1997-2012.</p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12 chart">
                 <div id="barChart" style="width: 100%; height: 100%;"></div>
+                <p>These charts show the tons of commodities that made their way from production in the United States to distribution in Canada, Mexico and all other countries.  The biggest change in the modes of transportation used is the transition from water transport to air transport to all other countries.  Because planes can travel much quicker than ships, American companies are utilizing the speed to bring their products to companies much quicker.  A general increasing trend, especially in the exports to Canada, show that the U.S. has increased its amount of exports in the past 15 years.  Specifically, the U.S. exported 564.5 million tons of commodities in 2012, up from 524.5 million in 1997.  </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 chart">
+                <div id="barChart2" style="width: 100%; height: 100%;"></div>
             </div>
         </div>
         <div class ="row">
@@ -66,16 +72,18 @@
             <div class="col-md-6 col-sm-12 chart">
                 <div id="pieChart2" style="width: 100%; height: 100%;"></div>
             </div>
+            <p>From the pie charts above, the U.S. has almost doubled the amount of exports to Mexico in the 15 years since the 1997 census study.  The country has proportionately decreased the percentage of exports to the rest of the world because it is sending more to Mexico and slightly more to Canada.  </p>
         </div>
         <div class ="row">
-            <div class="col-sm-12 chart">FOR THE LINE CHART
+            <div class="col-sm-12 chart">
                 <div id="lineChart" style="width: 100%; height: 100%;"></div>
+                <p>This chart shows the general increase in exports, specifically export value, since 1997.  The dip in 2002 from 1997 is interesting and may have resulted from the 9/11 terrorist attacks on New York City in 2001.  Since then, however, the complete export value has continued to grow.  </p>
             </div>
         </div>
         <div class ="row">
             <div class="col-xs-12">
                 <h2>Change in Export Transportation, 1997 and 2012</h2>
-                <table id="example" class="display" cellspacing="0" width="100%">
+                <table id="example" class="display" cellspacing="0" width="80%" height="80%">
                     <thead>
                         <tr>
                             <th>Country</th>
@@ -105,6 +113,7 @@
                         </tr>
                     </tfoot>
     </table>
+                <p>*S = Witheld because estimate did not meet publication standards</p>
             </div>
         </div>
     </div>
