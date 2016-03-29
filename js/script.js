@@ -20,7 +20,6 @@ $(document).ready(function(){
     var oldTons = [];
     var oldPctTons = [];
     
-   var country = [];
    var nineseven = [];
    var ohtwo = [];
    var ohseven = [];
@@ -496,7 +495,7 @@ function buildPie2() {
 
 $(document).ready(function() {
             $('#example').DataTable( {
-             "ajax": '../data/finaltable.js'
+             "ajax": '../data/finaltable.json'
             } );
         } );
 
